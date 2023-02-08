@@ -1,0 +1,18 @@
+{% extends 'partials/base.html' %}
+    {% block contents %}
+<center>
+    <ul class="nav flex-column">  
+        {% for object in object_list %}  
+        <li>First Name: {{ object.first_name }} </li> 
+        <li> Last Name: {{ object.last_name }}</li>
+        <li>Mobile: {{ object.mobile }} </li>
+        <li>Email: {{ object.email }} </li>
+  
+        <hr/>  
+        {% empty %}  
+        <li class="nav-item">No objects Find</li>  
+        {% endfor %}  
+    </ul> 
+</center> 
+
+{% endblock %}
